@@ -1,0 +1,1 @@
+# python-gemini-discord-workshop
