@@ -13,7 +13,7 @@ class BotClient(discord.Client):
 
     async def on_message(self, message):
         if message.guild.get_member(self.user.id) in message.mentions:
-            message.channel.send(self.remove_mention(message.content, self.user.id))
+            await message.channel.send(self.remove_mention(message.content, self.user.id))
 
     def remove_mention(self, text, user_id):
         result = str.strip(f'{re.sub(f"<.*{user_id}>","",text)}')
